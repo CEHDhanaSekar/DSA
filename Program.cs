@@ -1,4 +1,5 @@
-﻿using DSA.DynamicList;
+﻿using DSA.Algorithms.Sorting;
+using DSA.DynamicList;
 using DSA.LinkedList;
 using DSA.Queue;
 using DSA.Stack;
@@ -7,59 +8,81 @@ class Program
 {
     static void Main()
     {
-        while (true)
+        Sort sort = new Sort();
+        int[] arr = new int[10];
+        arr = [10, 30, 50, 20, 80, 40, 60];
+        sort.SelectionSort(arr);
+        for(int i = 0; i < arr.Length; i++)
         {
-            Console.WriteLine("\n--- DATA STRUCTURE TESTER ---");
-            Console.WriteLine("1. Dynamic List");
-            Console.WriteLine("2. Singly Linked List");
-            Console.WriteLine("3. Doubly Linked List");
-            Console.WriteLine("4. Circular Linked List");
-            Console.WriteLine("5. Queue List (Time Efficient)");
-            Console.WriteLine("6. Queue List 2 (Space Efficient)");
-            Console.WriteLine("7. Queue Linked List");
-            Console.WriteLine("8. Stack List");
-            Console.WriteLine("9. Stack Linked List");
-            Console.WriteLine("0. Exit");
-
-            Console.Write("Choose option: ");
-            int choice = int.Parse(Console.ReadLine()!);
-
-            switch (choice)
-            {
-                case 1:
-                    TestDynamicList();
-                    break;
-                case 2:
-                    TestLinkedList();
-                    break;
-                case 3:
-                    TestDoublyLinkedList();
-                    break;
-                case 4:
-                    TestCircularLinkedList();
-                    break;
-                case 5:
-                    TestQueueList();
-                    break;
-                case 6:
-                    TestQueueList2();
-                    break;
-                case 7:
-                    TestQueueLinkedList();
-                    break;
-                case 8:
-                    TestStackList();
-                    break;
-                case 9:
-                    TestStackLinkedList();
-                    break;
-                case 0:
-                    return;
-                default:
-                    Console.WriteLine("Invalid choice");
-                    break;
-            }
+            Console.WriteLine(arr[i]);
         }
+        int[] arr2 = [10, 30, 50, 20, 80, 40, 60];
+        sort.BubbleSort(arr2);
+        Console.WriteLine("------------");
+        for (int i = 0; i < arr2.Length; i++)
+        {
+            Console.WriteLine(arr2[i]);
+        }
+        int[] arr3 = [10, 30, 50, 20, 80, 40, 60];
+        sort.InsertionSort(arr3);
+        Console.WriteLine("------------");
+        for (int i = 0; i < arr2.Length; i++)
+        {
+            Console.WriteLine(arr2[i]);
+        }
+        //while (true)
+        //{
+        //    Console.WriteLine("\n--- DATA STRUCTURE TESTER ---");
+        //    Console.WriteLine("1. Dynamic List");
+        //    Console.WriteLine("2. Singly Linked List");
+        //    Console.WriteLine("3. Doubly Linked List");
+        //    Console.WriteLine("4. Circular Linked List");
+        //    Console.WriteLine("5. Queue List (Time Efficient)");
+        //    Console.WriteLine("6. Queue List 2 (Space Efficient)");
+        //    Console.WriteLine("7. Queue Linked List");
+        //    Console.WriteLine("8. Stack List");
+        //    Console.WriteLine("9. Stack Linked List");
+        //    Console.WriteLine("0. Exit");
+
+        //    Console.Write("Choose option: ");
+        //    int choice = int.Parse(Console.ReadLine()!);
+
+        //    switch (choice)
+        //    {
+        //        case 1:
+        //            TestDynamicList();
+        //            break;
+        //        case 2:
+        //            TestLinkedList();
+        //            break;
+        //        case 3:
+        //            TestDoublyLinkedList();
+        //            break;
+        //        case 4:
+        //            TestCircularLinkedList();
+        //            break;
+        //        case 5:
+        //            TestQueueList();
+        //            break;
+        //        case 6:
+        //            TestQueueList2();
+        //            break;
+        //        case 7:
+        //            TestQueueLinkedList();
+        //            break;
+        //        case 8:
+        //            TestStackList();
+        //            break;
+        //        case 9:
+        //            TestStackLinkedList();
+        //            break;
+        //        case 0:
+        //            return;
+        //        default:
+        //            Console.WriteLine("Invalid choice");
+        //            break;
+        //    }
+        //}
     }
 
     // ---------------- DYNAMIC LIST ----------------
